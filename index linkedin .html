@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — LinkedIn AI Comments</title>
+<style>
+  :root {
+    --blue: #0a66c2;
+    --text: #1a1a1a;
+    --muted: #666;
+    --border: #e9e5df;
+    --bg: #fafafa;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.65;
+    padding: 40px 20px 80px;
+  }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 48px 56px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: var(--text);
+  }
+  .sub {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 6px;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-top: 34px;
+    margin-bottom: 10px;
+    letter-spacing: -0.005em;
+  }
+  p { margin-bottom: 12px; color: #2a2a2a; }
+  ul { margin: 10px 0 12px 22px; }
+  li { margin-bottom: 6px; color: #2a2a2a; }
+  strong { color: var(--text); }
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .highlight {
+    background: #eef3fb;
+    border-left: 3px solid var(--blue);
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin: 16px 0;
+    font-size: 14.5px;
+  }
+  .highlight strong { color: var(--blue); }
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Privacy Policy</h1>
+    <div class="sub">LinkedIn AI Comments — Chrome Extension</div>
+    <div class="meta">Last updated: April 24, 2026</div>
+  </header>
+
+  <p>
+    This privacy policy explains how the <strong>LinkedIn AI Comments</strong> browser
+    extension (the "Extension") handles information. The Extension is designed with a
+    privacy-first approach: we do not operate a backend server, we do not collect any
+    data about you, and we do not track your activity.
+  </p>
+
+  <div class="highlight">
+    <strong>In one sentence:</strong> your data stays on your device, except for the
+    LinkedIn post text that you explicitly choose to send to Anthropic's Claude API —
+    using your own API key — when you click the "AI Comment" button.
+  </div>
+
+  <h2>1. Who we are</h2>
+  <p>
+    This Extension is developed and maintained by its independent creator (the
+    "Developer"). The Developer does not operate any backend infrastructure and does not
+    collect, store, or process user data on any server.
+  </p>
+
+  <h2>2. What data the Extension handles</h2>
+  <p>The Extension handles the following categories of data, all of which remain under your control:</p>
+  <ul>
+    <li>
+      <strong>Profile information you enter:</strong> name, role, industry, preferred
+      tone, LinkedIn goal, and optional short bio. This is used to personalize the
+      suggestions generated for you.
+    </li>
+    <li>
+      <strong>Your Anthropic API key:</strong> provided by you, required to make requests
+      to Anthropic's Claude API.
+    </li>
+    <li>
+      <strong>LinkedIn post content:</strong> the text of a specific LinkedIn post,
+      accessed only when you click the "AI Comment" button on that post.
+    </li>
+  </ul>
+
+  <h2>3. Where your data is stored</h2>
+  <p>
+    Your profile information and your API key are stored <strong>locally on your device</strong>
+    using the Chrome Storage API (<code>chrome.storage.sync</code>). This means the data
+    is kept in your Chrome profile and may be synchronized across your own devices by
+    Chrome's built-in sync feature (if you have it enabled with your Google account).
+  </p>
+  <p>
+    The Developer does <strong>not</strong> have access to this data. It is never
+    transmitted to the Developer, any analytics service, or any third party other than
+    Anthropic as described below.
+  </p>
+
+  <h2>4. When and how data leaves your device</h2>
+  <p>
+    Data leaves your device only in one situation: when you actively click the "AI Comment"
+    button on a LinkedIn post and request that comment suggestions be generated. At that
+    moment, the Extension makes a direct HTTPS request from your browser to Anthropic's
+    Claude API (<code>https://api.anthropic.com</code>) containing:
+  </p>
+  <ul>
+    <li>the text of the LinkedIn post you are viewing;</li>
+    <li>selected metadata visible in the post (author name, author title, hashtags, presence of image/video);</li>
+    <li>your selected goal and tone for this generation;</li>
+    <li>your profile information, used to personalize the output;</li>
+    <li>your Anthropic API key, used to authenticate the request.</li>
+  </ul>
+  <p>
+    This request goes <strong>directly from your browser to Anthropic</strong>. It does
+    not pass through any server operated by the Developer. Anthropic's handling of this
+    data is governed by their own
+    <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+    and
+    <a href="https://www.anthropic.com/legal/commercial-terms" target="_blank" rel="noopener">Commercial Terms</a>.
+  </p>
+
+  <h2>5. What we do NOT do</h2>
+  <ul>
+    <li>We do not collect any personal data on our own servers (we have no servers).</li>
+    <li>We do not use analytics, tracking pixels, or third-party SDKs.</li>
+    <li>We do not sell or share your data with anyone.</li>
+    <li>We do not read or modify content on any website other than linkedin.com.</li>
+    <li>We do not access your LinkedIn credentials, messages, connections, or profile data.</li>
+    <li>We do not store your API key remotely. It lives only on your device.</li>
+    <li>We do not use your data for advertising, credit scoring, or lending decisions.</li>
+  </ul>
+
+  <h2>6. Permissions the Extension requests</h2>
+  <ul>
+    <li>
+      <strong>storage</strong> — to save your profile preferences and API key locally.
+    </li>
+    <li>
+      <strong>activeTab</strong> — to read the content of the LinkedIn post you are
+      viewing, only at the moment you click the "AI Comment" button.
+    </li>
+    <li>
+      <strong>host permission for linkedin.com</strong> — to inject the "AI Comment"
+      button and the suggestions panel into the LinkedIn interface.
+    </li>
+    <li>
+      <strong>host permission for api.anthropic.com</strong> — to send your generation
+      request directly to Anthropic's Claude API.
+    </li>
+  </ul>
+
+  <h2>7. Data retention and deletion</h2>
+  <p>
+    Because data stays on your device, you can remove it at any time by:
+  </p>
+  <ul>
+    <li>clearing your profile and API key from the Extension's popup;</li>
+    <li>uninstalling the Extension, which also removes all locally stored data;</li>
+    <li>clearing your Chrome extension storage from Chrome's settings.</li>
+  </ul>
+
+  <h2>8. Children's privacy</h2>
+  <p>
+    The Extension is not intended for, and must not be used by, anyone under the age of
+    13 (or the minimum age required by law in your jurisdiction). It is also subject to
+    LinkedIn's own minimum age requirements.
+  </p>
+
+  <h2>9. Security</h2>
+  <p>
+    All communication with Anthropic's API occurs over HTTPS. Your API key is never
+    logged or transmitted to any party other than Anthropic. That said, since your API
+    key is stored locally via <code>chrome.storage.sync</code>, its security ultimately
+    depends on the security of your Google account and your device. Do not share your
+    Chrome profile or Google account with untrusted parties.
+  </p>
+
+  <h2>10. Changes to this policy</h2>
+  <p>
+    This policy may be updated to reflect changes in the Extension's features or in
+    applicable regulations. Any updates will be published at this URL, and the "Last
+    updated" date at the top of this page will change accordingly. Material changes will
+    also be communicated in the Extension's changelog on the Chrome Web Store.
+  </p>
+
+  <h2>11. Contact</h2>
+  <p>
+    For questions about this policy or the Extension, you can reach the Developer at:
+    <br>
+    <strong>Email:</strong> <a href="mailto:nico.maggi95@gmail.com">nico.maggi95@gmail.com</a>
+  </p>
+
+  <footer>
+    © 2026 LinkedIn AI Comments. This Extension is not affiliated with, endorsed by, or
+    sponsored by LinkedIn Corporation or Anthropic, PBC. "LinkedIn" is a trademark of
+    LinkedIn Corporation. "Claude" and "Anthropic" are trademarks of Anthropic, PBC.
+  </footer>
+</div>
+</body>
+</html>
